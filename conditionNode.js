@@ -4,7 +4,7 @@ import { AIMessage } from "@langchain/core/messages";
 export const shouldContinue = (state) => {
   const lastMessage = state.messages.at(-1);
 
-  // Check if it's an AIMessage before accessing tool_calls
+  // Checking if it's an AIMessage before accessing tool_calls
   if (!lastMessage || !AIMessage.isInstance(lastMessage)) {
     return END;
   }
